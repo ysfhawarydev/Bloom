@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main: chocolate;
+  --sec: black;
+  --size: 20px;
+}
+
+.nav {
+  background-color: white;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: fixed;
+  top: 0px;
+  z-index: 2000;
+  box-shadow: 0 0 7px black;
+}
+
+.left {
+  width: 20%;
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-around;
+  align-items: center;
+}
+
+.left h1 {
+  font-size: 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.left span {
+  color: var(--main);
+}
+
+.contact a {
+  text-decoration: none;
+  padding: 10px;
+  font-size: var(--size);
+  color: var(--sec);
+  background-color: transparent;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.contact a:hover {
+  background-color: lightgrey;
+}
+
+.right {
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.icon a {
+  border-radius: 50%;
+  padding: 10px;
+  font-size: var(--size);
+  background-color: transparent;
+  text-decoration: none;
+  color: var(--sec);
+  transition: all 0.3s ease;
+}
+
+.icon:hover a {
+  background-color: lightgrey;
+}
+
+.in a {
+  text-decoration: none;
+  padding: 10px;
+  font-size: var(--size);
+  color: var(--sec);
+  background-color: transparent;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.in:hover a {
+  background-color: bisque;
+  color: rgb(242, 140, 104);
+}
+
+.up a {
+  text-decoration: none;
+  padding: 10px;
+  font-size: var(--size);
+  color: var(--sec);
+  background-color: var(--main);
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+.up:hover a {
+  background-color: rgb(214, 123, 58);
+}
+
+.heading {
+  margin: 150px 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading h2 {
+  font-size: 35px;
+  color: var(--main);
+}
+.heading p {
+  font-size: var(--size);
+}
+
+.container {
+  padding: 0 80px;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.shoes {
+  width: 30%;
+  height: 500px;
+  border-radius: 20px;
+  display: flex;
+  flex-flow: wrap column;
+  gap: 10px;
+  box-shadow: 0 0 3px var(--main);
+  position: relative;
+  bottom: 0;
+  transition: all 0.3s ease;
+}
+
+.shoes:hover {
+  bottom: 7px;
+  box-shadow: 0 0 9px var(--main);
+}
+
+.image {
+  width: 100%;
+  height: 70%;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+  transition: all 0.3s ease;
+}
+
+.shoes:hover img {
+  transform: scale(1.2);
+}
+
+.price {
+  font-size: 30px;
+  padding-left: 20px;
+}
+
+.title {
+  width: 100%;
+  padding-left: 20px;
+  color: var(--sec);
+  transition: all 0.3s ease;
+}
+
+.title:hover {
+  color: var(--main);
+}
+
+.butt button {
+  width: 90%;
+  margin-left: 20px;
+  border: none;
+  background-color: var(--main);
+  border-radius: 25px;
+  height: 40px;
+}
+.layer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 20px 20px 0 0;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.shoes:hover .layer {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.heart {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  opacity: 0;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.shoes:hover .heart {
+  opacity: 1;
+}
+
+.heart:hover {
+  color: var(--main);
+}
+
+.quick button {
+  border: none;
+  width: 120px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: var(--main);
+  opacity: 1;
+}
+.quick {
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.shoes:hover .quick {
+  opacity: 1;
+}
+
+@media (max-width: 992px) {
+  .shoes {
+    width: 40%;
+  }
+
+  .left {
+    width: 40%;
+  }
+
+  .right {
+    width: 50%;
+  }
+
+  .heading {
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .heading p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    height: auto;
+    padding: 15px 0;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .shoes {
+    width: 70%;
+  }
+
+  .heading {
+    margin-top: 180px;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .heading h2 {
+    font-size: 28px;
+  }
+
+  .heading p {
+    font-size: 16px;
+  }
+}
